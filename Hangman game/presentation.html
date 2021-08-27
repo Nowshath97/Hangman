@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script type="text/javascript" src="scriptstyle.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<header>
+
+    <body class="deep-purple-skin">
+
+        <nav id="sidebar" class="c-sidebar c-sidebar-dark c-sidebar-show" style="margin-top:49px">
+            
+
+           <button id="team0" class="btn btn-outline-white wow fadeInDown waves-effect waves-light"
+                data-wow-delay="0.4s" style="visibility: visible; animation-name: fadeInDown; animation-delay: 0.4s;"
+                role="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                aria-controls="collapseExample" onclick="teamlist()">Teams</button>
+             
+             <h6 class="hr-light wow fadeInLeft"></h6>
+         
+                <div class="collapse" id="collapseExample">
+
+                   
+                <p id="team1"><strong></strong></p> <p id="team2"><strong></strong></p>
+                
+            </div>
+                
+                    
+            </div>
+            
+
+               
+
+           
+
+           
+            <h4 id="clue"></h4><br>
+            <h4 id="clue2"></h4><br>
+            <h4 id='clue3'></h4>
+
+        </nav>
+        <nav class="navbar navbar-expand navbar-dark bg-dark" style="margin-top:-100px">
+            <div class="container-fluid" style="background-color:#3a3838">
+                <div class="w3-main">
+                    <a class="navbar-brand" href="#">Hangman</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02"
+                        aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarsExample02">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="hangman.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            
+                            
+                        </ul>
+                        
+
+                        <button id="teams2" style="margin-left:1260px" class="btn btn-outline-white wow fadeInDown"
+                            data-wow-delay="0.4s" onclick="shuffleteams()">Shuffle Teams</button>
+                               
+                                
+                    </div>
+                </div>
+        </nav>
+        </div>
+        <header>
+            <!-- Navbar -->
+            <!-- Full Page Intro -->
+
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-black-light align-items-center">
+                <!-- Content -->
+
+                <div class="container">
+                    <!--Grid row-->
+
+                    <div class="row">
+                        <button id="scores1" style="margin-left:830px" class="btn btn-primary"
+                        data-wow-delay="0.4s" onclick="shuffleteams()">Team 1 Score: <span id='score1'>0</span></button>
+
+                    <button id="scores2" style="margin-left:0px" class="btn btn-warning"
+                        data-wow-delay="0.4s" onclick="shuffleteams()">Team 2 Score: <span id='score2'>0</span></button>
+
+                        <div class="col-md-12 mb-4 white-text text-center">
+                            <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+                                data-wow-delay="0.3s"><strong>Hangman</strong></h1>
+
+                                
+
+                            <div class="container">
+                                <div class="float-right">
+                                    <div class="btn btn-danger">Wrong Guesses: <span id='mistakes'>0</span> of <span
+                                            id='maxWrong'></span></div>
+                                </div>
+                                <br><br><br><br>
+                                <img class="rounded float-right" id='hangmanPic' src="./images/0.jpg" alt="">
+
+
+                                <p id="answer"></p>
+                                <h4 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s">
+                                    <strong>Guess the Movie:</strong>
+                                </h4>
+
+                                <p id="wordSpotlight">The word to be guessed goes here</p>
+                                <br><br><br><br>
+                                <div class="col-md-12 mb-4 white-text text-center" id="keyboard"></div>
+                                <button type="button" class="btn btn-success" id="nextmovie" onClick="reset()">Next
+                                    Movie</button>
+                                <button type="button" class="btn btn-info" onClick="hint()">Hint</button>
+                                
+                            
+                                <div class="container d-flex justify-content-center">
+                                    <div class="modal fade" id="myModal0" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="card" style="width: 36rem;">
+                                                <div class="text-right cross"> <i class="fa fa-times"></i> </div>
+                                                <div class="card-body text-center"> <img src="./images/c2.gif">
+                                                    <!--https://img.icons8.com/bubbles/200/000000/trophy.png-->
+                                                    <h4>CONGRATULATIONS Both Teams !!!</h4>
+                                                    <h6>You have won the Hangman game. Hope you have
+                                                        enjoyed!</h6>
+                                                    <button class="btn btn-out btn-square continue"
+                                                        onClick="window.location.href=window.location.href">PLAY
+                                                        AGAIN</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                <div class="container d-flex justify-content-center">
+                                    <div class="modal fade" id="myModal1" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="card" style="width: 36rem;">
+                                                <div class="text-right cross"> <i class="fa fa-times"></i> </div>
+                                                <div class="card-body text-center"> <img src="./images/c2.gif">
+                                                    <!--https://img.icons8.com/bubbles/200/000000/trophy.png-->
+                                                    <h4>CONGRATULATIONS Team 1 !!!</h4>
+                                                    <h6>You have won Hangman game. Hope you have
+                                                        enjoyed!</h6> <h4>Better Luck Next Time Team 2!!!</h4>
+                                                        <h6>You have won many hearts &hearts;&hearts;&hearts;</h6>
+                                                    <button class="btn btn-out btn-square continue"
+                                                        onClick="window.location.href=window.location.href">PLAY
+                                                        AGAIN</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container d-flex justify-content-center">
+                                    <div class="modal fade" id="myModal2" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="card" style="width: 36rem;">
+                                                <div class="text-right cross"> <i class="fa fa-times"></i> </div>
+                                                <div class="card-body text-center"> <img src="./images/c2.gif">
+                                                    <!--https://img.icons8.com/bubbles/200/000000/trophy.png-->
+                                                    <h4>CONGRATULATIONS Team 2!!!</h4>
+                                                    <h6>You have won Hangman game. Hope you have
+                                                        enjoyed! </h6>
+                                                        <h4>Better Luck Next Time Team 1!!!</h4>
+                                                    <h6>You have won many hearts &hearts;&hearts;&hearts;</h6>
+                                                    <button class="btn btn-out btn-square continue"
+                                                        onClick="window.location.href=window.location.href">PLAY
+                                                        AGAIN</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script src='./js/hangman.js'></script>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+            </div>
+            </div>
+            <!-- Full Page Intro -->
+        </header>
+
+    </body>
+
+</html>
