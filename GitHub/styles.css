@@ -1,0 +1,194 @@
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+    color: red;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #78909c !important;
+  }
+}
+
+.hr-light{
+  color: rgb(26, 5, 5);
+}
+h1 {
+  letter-spacing: 0px;
+  color: rgb(26, 5, 5);
+}
+
+h5 {
+  letter-spacing: 3px;
+  color: rgb(245, 59, 12);
+}
+h3{
+    color: rgb(2, 50, 56);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h6{
+  color: rgb(15, 4, 4);
+}
+
+
+
+a:link {
+    color: red;}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+  color: rgb(203, 203, 224);
+}
+.btn-outline-white {
+    border: 2px solid rgb(155, 26, 26)!important;
+    background-color: transparent!important;
+    color: rgb(14, 6, 6)!important;
+}
+
+.p{
+    color:rgb(10, 1, 1);
+}
+
+.btn {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    padding: .54rem 1.50rem;
+    font-size: .91rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    margin: .375rem;
+    border: 0;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: normal;
+    color: rgb(253, 251, 251);
+}
+
+
+.btn btn-warning
+{
+    font-size: 13px;
+    color:green;
+}
+
+
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #6b270c;
+    background-image: url("'./images/Rr.jpg'");
+    background-image: linear-gradient(rgb(56, 162, 211), rgb(11, 148, 240));
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.flip-card {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 10px 0 rgba(90,90,90,0.2)
+}
+
+
+.flip-card.flipped .flip-card-inner {   
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+
+
+.flip-card-back {
+
+  transform: rotateY(180deg);
+}
+
+/* Visit https://nicolaskadis.info/posts/pure-css-flip-cards-using-bootstrap-4-and-css-grid-no-js for an explanation */
+
+/* for demo purposes */
+.card {
+  margin: 10px 10px;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+/* Flip Cards CSS */
+.card-container {
+  display: grid;
+  perspective: 700px;
+}
+
+.card-flip {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+}
+
+.card-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.front {
+  grid-area: frontAndBack;
+}
+
+.back {
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
+}
+
+input[type='checkbox']:checked + .card-container .card-flip {
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
