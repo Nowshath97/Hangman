@@ -87,19 +87,12 @@ function randomWord() {
 
   answer = movies[j];
   j++;
-  if (j == movies.length+1) {
+  if (j > movies.length) {
     //const el = document.getElementById("nextmovie");
     const e1 = document.getElementById("nextmovie");
     e1.addEventListener("click", endgame());
   }
-  else if(j=== movies.length+2){
-    const e2 = document.getElementById("nextmovie");
-    e2.addEventListener("click", congrats());
-  }
-  else if(j>movies.length+2){
-  const e3 = document.getElementById("nextmovie");
-    e3.addEventListener("click", endgame());
-  }
+  
 }
 
 
@@ -389,7 +382,7 @@ function datacard() {
 (function () {
   endgame = function() {
  
-  
+  congrats();
   swal({
   title: 'End of Movies',
   text: 'Hope you have ENJOYED !!!',
