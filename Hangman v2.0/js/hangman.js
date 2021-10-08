@@ -323,7 +323,7 @@ function shuffleteams() {
 
 function timer() {
  
-  var timeleft = 10;
+  var timeleft = 300;
   var interval = setInterval(function () {
     
     document.getElementById('count').innerHTML = timeleft;
